@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - QuickWit</title>
+    <title>Contact - KeshavSoftware</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -39,9 +39,9 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">
-                <svg class="bi me-2" width="24" height="24" role="img" aria-label="QuickWit">
+                <svg class="bi me-2" width="24" height="24" role="img" aria-label="KeshavSoftware">
                     <use xlink:href="#lightning-charge"></use>
-                </svg>QuickWit
+                </svg>KeshavSoftware
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -289,7 +289,7 @@
                         <div class="accordion-item border-0 shadow-sm mb-3">
                             <h2 class="accordion-header">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                                    What services does QuickWit offer?
+                                    What services does KeshavSoftware offer?
                                 </button>
                             </h2>
                             <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
@@ -346,9 +346,9 @@
             <div class="row">
                 <div class="col-lg-4 mb-4">
                     <h5 class="fw-bold mb-3">
-                        <svg class="bi me-2" width="20" height="20" role="img" aria-label="QuickWit">
+                        <svg class="bi me-2" width="20" height="20" role="img" aria-label="KeshavSoftware">
                             <use xlink:href="#lightning-charge"></use>
-                        </svg>QuickWit
+                        </svg>KeshavSoftware
                     </h5>
                     <p class="text-muted">Empowering minds with innovative solutions. We create exceptional digital experiences that drive success.</p>
                     <div class="social-links">
@@ -379,13 +379,13 @@
                     <h6 class="fw-bold mb-3">Contact Info</h6>
                     <p class="text-muted mb-2"><i class="bi bi-geo-alt me-2"></i>123 Business St, City, State 12345</p>
                     <p class="text-muted mb-2"><i class="bi bi-telephone me-2"></i>+1 (555) 123-4567</p>
-                    <p class="text-muted"><i class="bi bi-envelope me-2"></i>info@quickwit.com</p>
+                    <p class="text-muted"><i class="bi bi-envelope me-2"></i>info@keshavsoftware.com</p>
                 </div>
             </div>
             <hr class="my-4">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <p class="text-muted mb-0">&copy; 2024 QuickWit. All rights reserved.</p>
+                    <p class="text-muted mb-0">&copy; 2024 KeshavSoftware. All rights reserved.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
                     <a href="#" class="text-muted text-decoration-none me-3">Privacy Policy</a>
@@ -398,44 +398,328 @@
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- Custom JavaScript for Form Validation -->
+    <!-- Custom JavaScript for Enhanced Functionality -->
     <script>
-        // Form validation
+        // Enhanced form validation with impressive effects
         (function() {
             'use strict';
             
             const form = document.getElementById('contactForm');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+            
+            // Add real-time validation
+            const inputs = form.querySelectorAll('input[required], textarea[required], input[type="email"]');
+            inputs.forEach(input => {
+                input.addEventListener('blur', function() {
+                    validateField(this);
+                });
+                
+                input.addEventListener('input', function() {
+                    if (this.classList.contains('is-invalid')) {
+                        validateField(this);
+                    }
+                });
+            });
+            
+            function validateField(field) {
+                const isValid = field.checkValidity();
+                field.classList.remove('is-valid', 'is-invalid');
+                field.classList.add(isValid ? 'is-valid' : 'is-invalid');
+                
+                // Add shake animation for invalid fields
+                if (!isValid) {
+                    field.style.animation = 'shake 0.5s';
+                    setTimeout(() => {
+                        field.style.animation = '';
+                    }, 500);
+                }
+            }
             
             form.addEventListener('submit', function(event) {
                 event.preventDefault();
                 event.stopPropagation();
                 
-                if (form.checkValidity()) {
-                    // Form is valid, show success message
-                    showSuccessMessage();
+                // Validate all fields
+                let isFormValid = true;
+                inputs.forEach(input => {
+                    validateField(input);
+                    if (!input.checkValidity()) {
+                        isFormValid = false;
+                    }
+                });
+                
+                if (isFormValid) {
+                    // Show loading state
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status"></span>Sending...';
+                    
+                    // Simulate form submission
+                    setTimeout(() => {
+                        showSuccessMessage();
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalBtnText;
+                    }, 2000);
                 } else {
-                    // Form is invalid, show validation feedback
-                    form.classList.add('was-validated');
+                    // Shake the form
+                    form.style.animation = 'shake 0.5s';
+                    setTimeout(() => {
+                        form.style.animation = '';
+                    }, 500);
                 }
             });
             
             function showSuccessMessage() {
                 const successAlert = document.createElement('div');
-                successAlert.className = 'alert alert-success alert-dismissible fade show';
+                successAlert.className = 'alert alert-success alert-dismissible fade show animate-in';
                 successAlert.innerHTML = `
-                    <i class="bi bi-check-circle me-2"></i>
-                    <strong>Success!</strong> Your message has been sent successfully. We'll get back to you within 24 hours.
-                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0">
+                            <i class="bi bi-check-circle-fill fs-4 text-success"></i>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <strong>Message Sent Successfully!</strong><br>
+                            <small class="text-muted">Thank you for contacting us. We'll get back to you within 24 hours.</small>
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
                 `;
                 
                 form.parentNode.insertBefore(successAlert, form);
                 form.reset();
-                form.classList.remove('was-validated');
                 
-                // Scroll to success message
+                // Remove validation classes
+                inputs.forEach(input => {
+                    input.classList.remove('is-valid', 'is-invalid');
+                });
+                
+                // Scroll to success message with smooth animation
                 successAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                // Auto-dismiss after 5 seconds
+                setTimeout(() => {
+                    if (successAlert.parentNode) {
+                        successAlert.remove();
+                    }
+                }, 5000);
             }
         })();
+        
+        // Enhanced contact information interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Make contact items clickable
+            const contactItems = document.querySelectorAll('.contact-item');
+            contactItems.forEach(item => {
+                const content = item.querySelector('p').textContent.trim();
+                
+                if (content.includes('+1')) {
+                    // Phone number - make it clickable
+                    item.style.cursor = 'pointer';
+                    item.addEventListener('click', function() {
+                        window.location.href = `tel:${content.replace(/\D/g, '')}`;
+                        showToast('Dialing ' + content + '...');
+                    });
+                } else if (content.includes('@')) {
+                    // Email - make it clickable
+                    item.style.cursor = 'pointer';
+                    item.addEventListener('click', function() {
+                        window.location.href = `mailto:${content}`;
+                        showToast('Opening email client...');
+                    });
+                } else if (content.includes('Business St')) {
+                    // Address - open in maps
+                    item.style.cursor = 'pointer';
+                    item.addEventListener('click', function() {
+                        const address = encodeURIComponent(content);
+                        window.open(`https://www.google.com/maps/search/?api=1&query=${address}`, '_blank');
+                        showToast('Opening in Google Maps...');
+                    });
+                }
+            });
+            
+            // Enhanced social media buttons
+            const socialBtns = document.querySelectorAll('.card-body .btn');
+            socialBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const platform = this.querySelector('i').className.split('-')[1];
+                    showToast(`Opening ${platform.charAt(0).toUpperCase() + platform.slice(1)}...`);
+                    
+                    // Add ripple effect
+                    createRipple(this, e);
+                    
+                    // Simulate opening social media
+                    setTimeout(() => {
+                        const urls = {
+                            facebook: 'https://facebook.com/keshavsoftware',
+                            twitter: 'https://twitter.com/keshavsoftware',
+                            linkedin: 'https://linkedin.com/company/keshavsoftware',
+                            instagram: 'https://instagram.com/keshavsoftware',
+                            github: 'https://github.com/keshavsoftware'
+                        };
+                        if (urls[platform]) {
+                            window.open(urls[platform], '_blank');
+                        }
+                    }, 500);
+                });
+            });
+            
+            // Enhanced FAQ interactions
+            const faqButtons = document.querySelectorAll('.accordion-button');
+            faqButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Add tracking animation
+                    setTimeout(() => {
+                        const collapse = document.querySelector(this.getAttribute('data-bs-target'));
+                        if (collapse && collapse.classList.contains('show')) {
+                            collapse.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                        }
+                    }, 350);
+                });
+            });
+            
+            // Add loading animations for all interactive elements
+            document.querySelectorAll('.btn:not([data-bs-toggle])').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    if (this.type !== 'submit' && !this.closest('.accordion')) {
+                        const originalText = this.innerHTML;
+                        this.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status"></span>Loading...';
+                        
+                        setTimeout(() => {
+                            this.innerHTML = originalText;
+                        }, 1500);
+                    }
+                });
+            });
+            
+            // Add intersection observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all cards and contact items
+            document.querySelectorAll('.card, .contact-item, .accordion-item').forEach(el => {
+                observer.observe(el);
+            });
+        });
+        
+        // Utility functions
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.className = 'toast-notification';
+            toast.textContent = message;
+            toast.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #6366f1;
+                color: white;
+                padding: 12px 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                z-index: 9999;
+                animation: slideInRight 0.3s ease;
+                font-weight: 500;
+            `;
+            
+            document.body.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.style.animation = 'slideOutRight 0.3s ease';
+                setTimeout(() => {
+                    if (toast.parentNode) {
+                        toast.remove();
+                    }
+                }, 300);
+            }, 2000);
+        }
+        
+        function createRipple(element, event) {
+            const ripple = document.createElement('span');
+            const rect = element.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = event.clientX - rect.left - size / 2;
+            const y = event.clientY - rect.top - size / 2;
+            
+            ripple.style.cssText = `
+                position: absolute;
+                width: ${size}px;
+                height: ${size}px;
+                left: ${x}px;
+                top: ${y}px;
+                background: rgba(255,255,255,0.3);
+                border-radius: 50%;
+                transform: scale(0);
+                animation: ripple 0.6s ease-out;
+                pointer-events: none;
+            `;
+            
+            element.style.position = 'relative';
+            element.style.overflow = 'hidden';
+            element.appendChild(ripple);
+            
+            setTimeout(() => {
+                if (ripple.parentNode) {
+                    ripple.remove();
+                }
+            }, 600);
+        }
+        
+        // Add custom CSS for animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes shake {
+                0%, 100% { transform: translateX(0); }
+                25% { transform: translateX(-5px); }
+                75% { transform: translateX(5px); }
+            }
+            
+            @keyframes slideInRight {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            
+            @keyframes slideOutRight {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+            
+            @keyframes ripple {
+                to { transform: scale(2); opacity: 0; }
+            }
+            
+            .contact-item {
+                transition: all 0.3s ease;
+                border-radius: 8px;
+                padding: 0.75rem !important;
+            }
+            
+            .contact-item:hover {
+                background: rgba(99, 102, 241, 0.05);
+                transform: translateX(5px);
+            }
+            
+            .form-control.is-valid, .form-select.is-valid {
+                border-color: #28a745;
+                box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+            }
+            
+            .form-control.is-invalid, .form-select.is-invalid {
+                border-color: #dc3545;
+                box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+            }
+        `;
+        document.head.appendChild(style);
     </script>
 </body>
 </html>

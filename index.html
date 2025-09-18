@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuickWit - Home</title>
+    <title>KeshavSoftware - Home</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -46,9 +46,9 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">
-                <svg class="bi me-2" width="24" height="24" role="img" aria-label="QuickWit">
+                <svg class="bi me-2" width="24" height="24" role="img" aria-label="KeshavSoftware">
                     <use xlink:href="#lightning-charge"></use>
-                </svg>QuickWit
+                </svg>KeshavSoftware
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -74,11 +74,15 @@
         <div class="container">
             <div class="row align-items-center min-vh-100">
                 <div class="col-lg-6">
-                    <h1 class="display-4 fw-bold mb-4">Welcome to QuickWit</h1>
+                    <h1 class="display-4 fw-bold mb-4">Welcome to KeshavSoftware</h1>
                     <p class="lead mb-4">Empowering minds with innovative solutions. We create exceptional digital experiences that drive success and inspire growth.</p>
                     <div class="d-flex gap-3 flex-wrap">
-                        <a href="about.html" class="btn btn-light btn-lg">Learn More</a>
-                        <a href="contact.html" class="btn btn-outline-light btn-lg">Get Started</a>
+                        <a href="about.html" class="btn btn-light btn-lg pulse-btn">
+                            <i class="bi bi-info-circle me-2"></i>Learn More
+                        </a>
+                        <a href="contact.html" class="btn btn-outline-light btn-lg glow-btn">
+                            <i class="bi bi-rocket-takeoff me-2"></i>Get Started
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -98,7 +102,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center mb-5">
-                    <h2 class="display-5 fw-bold">Why Choose QuickWit?</h2>
+                    <h2 class="display-5 fw-bold">Why Choose KeshavSoftware?</h2>
                     <p class="lead text-muted">We combine creativity, technology, and expertise to deliver outstanding results.</p>
                 </div>
             </div>
@@ -113,7 +117,7 @@
                             </div>
                             <h5 class="card-title">Fast Performance</h5>
                             <p class="card-text text-muted">Lightning-fast solutions that deliver results quickly and efficiently.</p>
-                            <a href="#" class="icon-link">
+                            <a href="about.html#services" class="icon-link smooth-scroll">
                                 Learn more
                                 <svg class="bi" aria-hidden="true">
                                     <use xlink:href="#chevron-right"></use>
@@ -132,7 +136,7 @@
                             </div>
                             <h5 class="card-title">Reliable & Secure</h5>
                             <p class="card-text text-muted">Built with security in mind, ensuring your data and operations are protected.</p>
-                            <a href="#" class="icon-link">
+                            <a href="contact.html" class="icon-link smooth-scroll">
                                 Learn more
                                 <svg class="bi" aria-hidden="true">
                                     <use xlink:href="#chevron-right"></use>
@@ -151,7 +155,7 @@
                             </div>
                             <h5 class="card-title">Expert Support</h5>
                             <p class="card-text text-muted">Our dedicated team provides 24/7 support to ensure your success.</p>
-                            <a href="#" class="icon-link">
+                            <a href="about.html#team" class="icon-link smooth-scroll">
                                 Learn more
                                 <svg class="bi" aria-hidden="true">
                                     <use xlink:href="#chevron-right"></use>
@@ -194,9 +198,9 @@
             <div class="row">
                 <div class="col-lg-4 mb-4">
                     <h5 class="fw-bold mb-3">
-                        <svg class="bi me-2" width="20" height="20" role="img" aria-label="QuickWit">
+                        <svg class="bi me-2" width="20" height="20" role="img" aria-label="KeshavSoftware">
                             <use xlink:href="#lightning-charge"></use>
-                        </svg>QuickWit
+                        </svg>KeshavSoftware
                     </h5>
                     <p class="text-muted">Empowering minds with innovative solutions. We create exceptional digital experiences that drive success.</p>
                     <div class="social-links">
@@ -227,13 +231,13 @@
                     <h6 class="fw-bold mb-3">Contact Info</h6>
                     <p class="text-muted mb-2"><i class="bi bi-geo-alt me-2"></i>123 Business St, City, State 12345</p>
                     <p class="text-muted mb-2"><i class="bi bi-telephone me-2"></i>+1 (555) 123-4567</p>
-                    <p class="text-muted"><i class="bi bi-envelope me-2"></i>info@quickwit.com</p>
+                    <p class="text-muted"><i class="bi bi-envelope me-2"></i>info@keshavsoftware.com</p>
                 </div>
             </div>
             <hr class="my-4">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <p class="text-muted mb-0">&copy; 2024 QuickWit. All rights reserved.</p>
+                    <p class="text-muted mb-0">&copy; 2024 KeshavSoftware. All rights reserved.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
                     <a href="#" class="text-muted text-decoration-none me-3">Privacy Policy</a>
@@ -245,5 +249,315 @@
 
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript for Enhanced Functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Enhanced button functionality
+            document.querySelectorAll('.btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    // Skip if it's a navigation link
+                    if (this.href && (this.href.includes('.html') || this.href.includes('#'))) {
+                        return;
+                    }
+                    
+                    if (!this.classList.contains('loading')) {
+                        this.classList.add('loading');
+                        const originalText = this.innerHTML;
+                        this.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status"></span>Loading...';
+                        
+                        setTimeout(() => {
+                            this.classList.remove('loading');
+                            this.innerHTML = originalText;
+                            
+                            // Show success notification
+                            showNotification('Action completed successfully!', 'success');
+                        }, 1500);
+                    }
+                });
+            });
+
+            // Service link functionality
+            const serviceLinks = document.querySelectorAll('footer a[href="#"]');
+            const serviceActions = {
+                'Web Development': () => {
+                    showServiceModal('Web Development', 'Custom web applications built with modern frameworks and best practices.');
+                },
+                'Mobile Apps': () => {
+                    showServiceModal('Mobile Apps', 'Native and cross-platform mobile applications for iOS and Android.');
+                },
+                'UI/UX Design': () => {
+                    showServiceModal('UI/UX Design', 'User-centered design that creates intuitive and engaging experiences.');
+                },
+                'Consulting': () => {
+                    showServiceModal('Consulting', 'Strategic technology consulting to optimize your digital infrastructure.');
+                },
+                'Privacy Policy': () => {
+                    showInfoModal('Privacy Policy', 'Your privacy is important to us. This policy outlines how we collect, use, and protect your information.');
+                },
+                'Terms of Service': () => {
+                    showInfoModal('Terms of Service', 'By using our services, you agree to these terms and conditions.');
+                }
+            };
+
+            serviceLinks.forEach(link => {
+                const serviceName = link.textContent.trim();
+                if (serviceActions[serviceName]) {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        serviceActions[serviceName]();
+                    });
+                }
+            });
+
+            // Social media link functionality
+            document.querySelectorAll('.social-links a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const platform = this.querySelector('i').className.split('-')[1];
+                    showNotification(`Opening ${platform.charAt(0).toUpperCase() + platform.slice(1)}...`, 'info');
+                    
+                    setTimeout(() => {
+                        const urls = {
+                            facebook: 'https://facebook.com/keshavsoftware',
+                            twitter: 'https://twitter.com/keshavsoftware',
+                            linkedin: 'https://linkedin.com/company/keshavsoftware',
+                            instagram: 'https://instagram.com/keshavsoftware'
+                        };
+                        if (urls[platform]) {
+                            window.open(urls[platform], '_blank');
+                        }
+                    }, 500);
+                });
+            });
+
+            // Contact info click functionality
+            const contactPhone = document.querySelector('footer p:contains("+1")');
+            const contactEmail = document.querySelector('footer p:contains("@")');
+            const contactAddress = document.querySelector('footer p:contains("Business St")');
+
+            // Make phone clickable
+            const phoneElement = Array.from(document.querySelectorAll('footer p')).find(p => p.textContent.includes('+1'));
+            if (phoneElement) {
+                phoneElement.style.cursor = 'pointer';
+                phoneElement.addEventListener('click', function() {
+                    const phone = this.textContent.match(/\+\d[\d\s\-\(\)]+/)[0];
+                    window.location.href = `tel:${phone.replace(/\D/g, '')}`;
+                    showNotification('Dialing ' + phone + '...', 'info');
+                });
+            }
+
+            // Make email clickable
+            const emailElement = Array.from(document.querySelectorAll('footer p')).find(p => p.textContent.includes('@'));
+            if (emailElement) {
+                emailElement.style.cursor = 'pointer';
+                emailElement.addEventListener('click', function() {
+                    const email = this.textContent.match(/[\w.-]+@[\w.-]+/)[0];
+                    window.location.href = `mailto:${email}`;
+                    showNotification('Opening email client...', 'info');
+                });
+            }
+
+            // Make address clickable
+            const addressElement = Array.from(document.querySelectorAll('footer p')).find(p => p.textContent.includes('Business St'));
+            if (addressElement) {
+                addressElement.style.cursor = 'pointer';
+                addressElement.addEventListener('click', function() {
+                    const address = encodeURIComponent(this.textContent.replace(/.*?([\d\w\s,]+)/, '$1'));
+                    window.open(`https://www.google.com/maps/search/?api=1&query=${address}`, '_blank');
+                    showNotification('Opening in Google Maps...', 'info');
+                });
+            }
+
+            // Stats counter animation
+            const stats = document.querySelectorAll('.display-4');
+            const animateCounter = (element, target) => {
+                let count = 0;
+                const increment = target / 100;
+                const timer = setInterval(() => {
+                    count += increment;
+                    if (count >= target) {
+                        count = target;
+                        clearInterval(timer);
+                    }
+                    
+                    if (target.toString().includes('+')) {
+                        element.textContent = Math.floor(count) + '+';
+                    } else if (target.toString().includes('%')) {
+                        element.textContent = Math.floor(count) + '%';
+                    } else {
+                        element.textContent = target;
+                    }
+                }, 20);
+            };
+
+            // Parallax effect for hero section
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const hero = document.querySelector('.hero-section');
+                if (hero && scrolled < window.innerHeight) {
+                    hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+                }
+            });
+
+            // Intersection Observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                        
+                        // Animate counters when stats section is visible
+                        if (entry.target.classList.contains('display-4')) {
+                            const text = entry.target.textContent;
+                            const number = parseInt(text.replace(/\D/g, ''));
+                            animateCounter(entry.target, number);
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all animated elements
+            document.querySelectorAll('.card, .feature-icon, .display-4').forEach(el => {
+                observer.observe(el);
+            });
+        });
+
+        // Utility functions
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `alert alert-${type} notification-toast`;
+            notification.innerHTML = `
+                <i class="bi bi-${type === 'success' ? 'check-circle' : 'info-circle'} me-2"></i>
+                ${message}
+            `;
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                z-index: 9999;
+                min-width: 300px;
+                animation: slideInRight 0.3s ease;
+                border: none;
+                border-radius: 10px;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.animation = 'slideOutRight 0.3s ease';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.remove();
+                    }
+                }, 300);
+            }, 3000);
+        }
+
+        function showServiceModal(title, description) {
+            const modal = document.createElement('div');
+            modal.className = 'modal fade';
+            modal.innerHTML = `
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">${title}</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>${description}</p>
+                            <p>Interested in learning more about our ${title.toLowerCase()} services?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" onclick="window.location.href='contact.html'">Get Quote</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            const bootstrapModal = new bootstrap.Modal(modal);
+            bootstrapModal.show();
+            
+            modal.addEventListener('hidden.bs.modal', function() {
+                modal.remove();
+            });
+        }
+
+        function showInfoModal(title, content) {
+            const modal = document.createElement('div');
+            modal.className = 'modal fade';
+            modal.innerHTML = `
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">${title}</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>${content}</p>
+                            <p>For complete ${title.toLowerCase()}, please contact our legal team.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" onclick="window.location.href='contact.html'">Contact Legal</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            const bootstrapModal = new bootstrap.Modal(modal);
+            bootstrapModal.show();
+            
+            modal.addEventListener('hidden.bs.modal', function() {
+                modal.remove();
+            });
+        }
+
+        // Add custom animations CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideInRight {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            
+            @keyframes slideOutRight {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+            
+            .notification-toast {
+                font-weight: 500;
+            }
+            
+            footer p:hover {
+                color: #6366f1 !important;
+                transition: color 0.3s ease;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
 </body>
 </html>

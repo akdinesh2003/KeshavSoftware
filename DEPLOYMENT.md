@@ -1,13 +1,13 @@
-# QuickWit - Deployment Guide
+# KeshavSoftware - Deployment Guide
 
 ## 🚀 GitHub Pages Deployment Instructions
 
-Follow these steps to deploy your QuickWit website to GitHub Pages:
+Follow these steps to deploy your KeshavSoftware website to GitHub Pages:
 
 ### Step 1: Create GitHub Repository
 1. Go to [GitHub.com](https://github.com) and sign in to your account
 2. Click the "+" icon in the top right corner and select "New repository"
-3. Name your repository (e.g., `quickwit-bootstrap-website`)
+3. Name your repository (e.g., `keshavsoftware-website`)
 4. Make sure the repository is **Public** (required for free GitHub Pages)
 5. **Do NOT** initialize with README, .gitignore, or license (we already have these)
 6. Click "Create repository"
@@ -15,7 +15,7 @@ Follow these steps to deploy your QuickWit website to GitHub Pages:
 ### Step 2: Connect Local Repository to GitHub
 ```bash
 # Add the remote origin (replace with your GitHub username and repository name)
-git remote add origin https://github.com/YOUR_USERNAME/quickwit-bootstrap-website.git
+git remote add origin https://github.com/YOUR_USERNAME/keshavsoftware-website.git
 
 # Push your code to GitHub
 git branch -M main
@@ -33,14 +33,14 @@ git push -u origin main
 ### Step 4: Access Your Live Website
 After 5-10 minutes, your website will be available at:
 ```
-https://YOUR_USERNAME.github.io/quickwit-bootstrap-website/
+https://YOUR_USERNAME.github.io/keshavsoftware-website/
 ```
 
 ## 🔗 Important Links to Update
 
 Once deployed, update the following in your README.md:
-- **GitHub Repository**: `https://github.com/YOUR_USERNAME/quickwit-bootstrap-website`
-- **Live Website**: `https://YOUR_USERNAME.github.io/quickwit-bootstrap-website/`
+- **GitHub Repository**: `https://github.com/YOUR_USERNAME/keshavsoftware-website`
+- **Live Website**: `https://YOUR_USERNAME.github.io/keshavsoftware-website/`
 
 ## 📱 Alternative Deployment - Netlify
 
@@ -62,7 +62,7 @@ Once deployed, update the following in your README.md:
 ### File Structure Verification:
 Your repository should have this structure:
 ```
-quickwit-bootstrap-website/
+keshavsoftware-website/
 ├── index.html
 ├── about.html
 ├── contact.html
