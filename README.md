@@ -216,8 +216,8 @@ http://localhost:8000
 ## 🌐 Live Demo
 
 ### 🔗 **Deployment Links**
-- **GitHub Repository**: [View Source Code](https://github.com/YOUR_USERNAME/keshavsoftware-website)
-- **Live Website**: [Visit KeshavSoftware](https://YOUR_USERNAME.github.io/keshavsoftware-website/)
+- **GitHub Repository**: [View Source Code]  https://github.com/akdinesh2003/KeshavSoftware
+- **Live Website**: [Visit KeshavSoftware]  https://darling-croquembouche-6dd45d.netlify.app/
 - **Local Development**: `http://localhost:8000`
 
 > 📝 **Note**: Replace `YOUR_USERNAME` with your actual GitHub username after deployment
@@ -701,11 +701,7 @@ The project successfully demonstrates the ability to create modern, responsive w
 
 ---
 
-**Developed by**: [Your Name]  
-**Date**: September 2024  
+**Developed by**: AK DINESH  
+**Date**: September 2025  
 **Framework**: Bootstrap 5.3.2  
 **License**: MIT License
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
