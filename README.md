@@ -4,8 +4,8 @@
 This project demonstrates modern web design using Bootstrap 5 components, creating a responsive and visually appealing multi-page website for KeshavSoftware, a fictional technology company specializing in digital solutions.
 
 ## 🚀 Live Demo
-- *GitHub Repository*: [Your GitHub URL here]
-- *Live Preview*: [Your GitHub Pages/Netlify URL here]
+- *GitHub Repository*: https://github.com/akdinesh2003/KeshavSoftware
+- *Live Preview*: https://darling-croquembouche-6dd45d.netlify.app/
 
 ## 📁 Project Structure
 
