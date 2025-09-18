@@ -12,11 +12,43 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- SVG Symbols for Icons -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="lightning-charge" viewBox="0 0 16 16">
+        <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"/>
+      </symbol>
+      <symbol id="speedometer2" viewBox="0 0 16 16">
+        <path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
+        <path fill-rule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z"/>
+      </symbol>
+      <symbol id="shield-check" viewBox="0 0 16 16">
+        <path d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z"/>
+        <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+      </symbol>
+      <symbol id="people" viewBox="0 0 16 16">
+        <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002A.274.274 0 0 1 15 13H7ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"/>
+      </symbol>
+      <symbol id="rocket" viewBox="0 0 16 16">
+        <path d="M8 8c.828 0 1.5-.895 1.5-2S8.828 4 8 4s-1.5.895-1.5 2S7.172 8 8 8Z"/>
+        <path d="M11.953 8.81c-.195.098-.39.195-.583.291A7.474 7.474 0 0 1 8 10c-1.777 0-3.337-.457-4.37-.899-.193-.096-.388-.193-.583-.291C1.544 8.82.521 8.82.521 8.82S.025 9.68 0 10.466c-.014.426.34.618.671.68.306.058.64.02 1.035-.1.265-.08.54-.205.832-.37l-.006.7c0 .294.118.576.327.784l.062.06c.391.391.877.546 1.348.464a1.7 1.7 0 0 0 .7-.3l.25-.15c.196-.117.4-.235.598-.355.027-.016.054-.033.08-.05.185-.122.369-.247.547-.375l.208-.15c.14-.1.279-.202.415-.306.068-.052.135-.104.2-.158.325-.27.63-.558.901-.87.065-.075.13-.15.192-.227.31-.38.58-.792.812-1.228.232-.436.424-.902.56-1.393.068-.246.12-.498.162-.753.021-.127.04-.255.056-.384.008-.065.015-.13.021-.195.003-.033.006-.065.008-.098.001-.016.002-.033.003-.049 0-.008 0-.015.001-.023 0-.004 0-.008 0-.012V8.82c0 .001-1.023 0-2.547-.01Z"/>
+      </symbol>
+      <symbol id="collection" viewBox="0 0 16 16">
+        <path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13z"/>
+      </symbol>
+      <symbol id="gear-fill" viewBox="0 0 16 16">
+        <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+      </symbol>
+      <symbol id="chevron-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+      </symbol>
+    </svg>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">
-                <i class="bi bi-lightning-charge me-2"></i>QuickWit
+                <svg class="bi me-2" width="24" height="24" role="img" aria-label="QuickWit">
+                    <use xlink:href="#lightning-charge"></use>
+                </svg>QuickWit
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -51,8 +83,10 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="hero-image-placeholder bg-white bg-opacity-10 rounded-4 p-5 text-center">
-                        <i class="bi bi-rocket display-1 mb-3"></i>
-                        <h4>Innovation at Work</h4>
+                        <svg class="bi" width="120" height="120" role="img" aria-hidden="true">
+                            <use xlink:href="#rocket"></use>
+                        </svg>
+                        <h4 class="mt-3">Innovation at Work</h4>
                     </div>
                 </div>
             </div>
@@ -72,33 +106,57 @@
                 <div class="col-md-4">
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body text-center p-4">
-                            <div class="feature-icon bg-primary bg-opacity-10 rounded-circle p-3 d-inline-flex mb-3">
-                                <i class="bi bi-speedometer2 text-primary fs-1"></i>
+                            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient rounded-circle mb-3" style="width: 4rem; height: 4rem;">
+                                <svg class="bi" width="1.5em" height="1.5em" aria-hidden="true">
+                                    <use xlink:href="#speedometer2"></use>
+                                </svg>
                             </div>
                             <h5 class="card-title">Fast Performance</h5>
                             <p class="card-text text-muted">Lightning-fast solutions that deliver results quickly and efficiently.</p>
+                            <a href="#" class="icon-link">
+                                Learn more
+                                <svg class="bi" aria-hidden="true">
+                                    <use xlink:href="#chevron-right"></use>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body text-center p-4">
-                            <div class="feature-icon bg-success bg-opacity-10 rounded-circle p-3 d-inline-flex mb-3">
-                                <i class="bi bi-shield-check text-success fs-1"></i>
+                            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-success bg-gradient rounded-circle mb-3" style="width: 4rem; height: 4rem;">
+                                <svg class="bi" width="1.5em" height="1.5em" aria-hidden="true">
+                                    <use xlink:href="#shield-check"></use>
+                                </svg>
                             </div>
                             <h5 class="card-title">Reliable & Secure</h5>
                             <p class="card-text text-muted">Built with security in mind, ensuring your data and operations are protected.</p>
+                            <a href="#" class="icon-link">
+                                Learn more
+                                <svg class="bi" aria-hidden="true">
+                                    <use xlink:href="#chevron-right"></use>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body text-center p-4">
-                            <div class="feature-icon bg-warning bg-opacity-10 rounded-circle p-3 d-inline-flex mb-3">
-                                <i class="bi bi-people text-warning fs-1"></i>
+                            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-warning bg-gradient rounded-circle mb-3" style="width: 4rem; height: 4rem;">
+                                <svg class="bi" width="1.5em" height="1.5em" aria-hidden="true">
+                                    <use xlink:href="#people"></use>
+                                </svg>
                             </div>
                             <h5 class="card-title">Expert Support</h5>
                             <p class="card-text text-muted">Our dedicated team provides 24/7 support to ensure your success.</p>
+                            <a href="#" class="icon-link">
+                                Learn more
+                                <svg class="bi" aria-hidden="true">
+                                    <use xlink:href="#chevron-right"></use>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -136,7 +194,9 @@
             <div class="row">
                 <div class="col-lg-4 mb-4">
                     <h5 class="fw-bold mb-3">
-                        <i class="bi bi-lightning-charge me-2"></i>QuickWit
+                        <svg class="bi me-2" width="20" height="20" role="img" aria-label="QuickWit">
+                            <use xlink:href="#lightning-charge"></use>
+                        </svg>QuickWit
                     </h5>
                     <p class="text-muted">Empowering minds with innovative solutions. We create exceptional digital experiences that drive success.</p>
                     <div class="social-links">

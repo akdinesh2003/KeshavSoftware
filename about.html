@@ -12,11 +12,37 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- SVG Symbols for Icons -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="lightning-charge" viewBox="0 0 16 16">
+        <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"/>
+      </symbol>
+      <symbol id="check" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+      </symbol>
+      <symbol id="code-slash" viewBox="0 0 16 16">
+        <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/>
+      </symbol>
+      <symbol id="phone" viewBox="0 0 16 16">
+        <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/>
+        <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+      </symbol>
+      <symbol id="palette" viewBox="0 0 16 16">
+        <path d="M8 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm4 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM5.5 7a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm.5 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+        <path d="M16 8c0 3.15-1.866 2.585-3.567 2.07C11.42 9.763 10.465 9.473 10 10c-.603.683-.475 1.819-.351 2.92C9.826 14.495 9.996 16 8 16a8 8 0 1 1 8-8z"/>
+      </symbol>
+      <symbol id="gear" viewBox="0 0 16 16">
+        <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+        <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319z"/>
+      </symbol>
+    </svg>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">
-                <i class="bi bi-lightning-charge me-2"></i>QuickWit
+                <svg class="bi me-2" width="24" height="24" role="img" aria-label="QuickWit">
+                    <use xlink:href="#lightning-charge"></use>
+                </svg>QuickWit
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -111,8 +137,10 @@
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6">
                     <div class="service-card text-center p-4">
-                        <div class="service-icon bg-primary bg-opacity-10 rounded-circle p-3 d-inline-flex mb-3">
-                            <i class="bi bi-code-slash text-primary fs-1"></i>
+                        <div class="service-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient rounded-circle mb-3" style="width: 4rem; height: 4rem;">
+                            <svg class="bi" width="1.5em" height="1.5em" aria-hidden="true">
+                                <use xlink:href="#code-slash"></use>
+                            </svg>
                         </div>
                         <h5 class="fw-bold mb-3">Web Development</h5>
                         <p class="text-muted">Custom web applications built with modern frameworks and best practices.</p>
@@ -120,8 +148,10 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="service-card text-center p-4">
-                        <div class="service-icon bg-success bg-opacity-10 rounded-circle p-3 d-inline-flex mb-3">
-                            <i class="bi bi-phone text-success fs-1"></i>
+                        <div class="service-icon d-inline-flex align-items-center justify-content-center text-bg-success bg-gradient rounded-circle mb-3" style="width: 4rem; height: 4rem;">
+                            <svg class="bi" width="1.5em" height="1.5em" aria-hidden="true">
+                                <use xlink:href="#phone"></use>
+                            </svg>
                         </div>
                         <h5 class="fw-bold mb-3">Mobile Apps</h5>
                         <p class="text-muted">Native and cross-platform mobile applications for iOS and Android.</p>
@@ -129,8 +159,10 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="service-card text-center p-4">
-                        <div class="service-icon bg-warning bg-opacity-10 rounded-circle p-3 d-inline-flex mb-3">
-                            <i class="bi bi-palette text-warning fs-1"></i>
+                        <div class="service-icon d-inline-flex align-items-center justify-content-center text-bg-warning bg-gradient rounded-circle mb-3" style="width: 4rem; height: 4rem;">
+                            <svg class="bi" width="1.5em" height="1.5em" aria-hidden="true">
+                                <use xlink:href="#palette"></use>
+                            </svg>
                         </div>
                         <h5 class="fw-bold mb-3">UI/UX Design</h5>
                         <p class="text-muted">User-centered design that creates intuitive and engaging experiences.</p>
@@ -138,8 +170,10 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="service-card text-center p-4">
-                        <div class="service-icon bg-info bg-opacity-10 rounded-circle p-3 d-inline-flex mb-3">
-                            <i class="bi bi-gear text-info fs-1"></i>
+                        <div class="service-icon d-inline-flex align-items-center justify-content-center text-bg-info bg-gradient rounded-circle mb-3" style="width: 4rem; height: 4rem;">
+                            <svg class="bi" width="1.5em" height="1.5em" aria-hidden="true">
+                                <use xlink:href="#gear"></use>
+                            </svg>
                         </div>
                         <h5 class="fw-bold mb-3">Consulting</h5>
                         <p class="text-muted">Strategic technology consulting to optimize your digital infrastructure.</p>
@@ -264,13 +298,133 @@
         </div>
     </section>
 
+    <!-- Pricing Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-5 fw-bold">Our Pricing Plans</h2>
+                    <p class="lead text-muted">Choose the perfect plan for your business needs. All plans include our core features and dedicated support.</p>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">Starter</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$299<small class="text-body-secondary fw-light">/project</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>5 pages included</li>
+                                <li>Responsive design</li>
+                                <li>Basic SEO optimization</li>
+                                <li>Email support</li>
+                                <li>1 month maintenance</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Get started</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                        <div class="card-header py-3 text-bg-primary border-primary">
+                            <h4 class="my-0 fw-normal text-white">Professional</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$799<small class="text-body-secondary fw-light">/project</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>15 pages included</li>
+                                <li>Advanced animations</li>
+                                <li>CMS integration</li>
+                                <li>Priority email support</li>
+                                <li>3 months maintenance</li>
+                                <li>Performance optimization</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-primary">Most popular</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">Enterprise</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$1499<small class="text-body-secondary fw-light">/project</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>Unlimited pages</li>
+                                <li>Custom functionality</li>
+                                <li>Database integration</li>
+                                <li>24/7 phone & email support</li>
+                                <li>6 months maintenance</li>
+                                <li>Dedicated project manager</li>
+                                <li>Training & documentation</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-primary">Contact sales</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Compare Plans Table -->
+            <h3 class="display-6 text-center mb-4 mt-5">Compare Plans</h3>
+            <div class="table-responsive">
+                <table class="table text-center">
+                    <thead>
+                        <tr>
+                            <th style="width: 34%;"></th>
+                            <th style="width: 22%;">Starter</th>
+                            <th style="width: 22%;">Professional</th>
+                            <th style="width: 22%;">Enterprise</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="text-start">Responsive Design</th>
+                            <td><svg class="bi" width="24" height="24" role="img" aria-label="Included"><use xlink:href="#check"></use></svg></td>
+                            <td><svg class="bi" width="24" height="24" role="img" aria-label="Included"><use xlink:href="#check"></use></svg></td>
+                            <td><svg class="bi" width="24" height="24" role="img" aria-label="Included"><use xlink:href="#check"></use></svg></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-start">CMS Integration</th>
+                            <td></td>
+                            <td><svg class="bi" width="24" height="24" role="img" aria-label="Included"><use xlink:href="#check"></use></svg></td>
+                            <td><svg class="bi" width="24" height="24" role="img" aria-label="Included"><use xlink:href="#check"></use></svg></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-start">Database Integration</th>
+                            <td></td>
+                            <td></td>
+                            <td><svg class="bi" width="24" height="24" role="img" aria-label="Included"><use xlink:href="#check"></use></svg></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-start">24/7 Support</th>
+                            <td></td>
+                            <td></td>
+                            <td><svg class="bi" width="24" height="24" role="img" aria-label="Included"><use xlink:href="#check"></use></svg></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-start">Dedicated Manager</th>
+                            <td></td>
+                            <td></td>
+                            <td><svg class="bi" width="24" height="24" role="img" aria-label="Included"><use xlink:href="#check"></use></svg></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-dark text-white py-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4">
                     <h5 class="fw-bold mb-3">
-                        <i class="bi bi-lightning-charge me-2"></i>QuickWit
+                        <svg class="bi me-2" width="20" height="20" role="img" aria-label="QuickWit">
+                            <use xlink:href="#lightning-charge"></use>
+                        </svg>QuickWit
                     </h5>
                     <p class="text-muted">Empowering minds with innovative solutions. We create exceptional digital experiences that drive success.</p>
                     <div class="social-links">

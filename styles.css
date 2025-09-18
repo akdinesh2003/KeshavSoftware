@@ -83,9 +83,87 @@ html {
     transition: all 0.3s ease;
 }
 
+/* SVG Icon Styles */
+.bi {
+    vertical-align: -0.125em;
+    fill: currentColor;
+}
+
+/* Icon link styles from Bootstrap examples */
+.icon-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--bs-primary);
+    transition: all 0.3s ease;
+}
+
+.icon-link:hover {
+    color: var(--bs-primary);
+    transform: translateX(0.25rem);
+}
+
+.icon-link .bi {
+    transition: transform 0.3s ease;
+    width: 1em;
+    height: 1em;
+    margin-left: 0.25rem;
+}
+
+.icon-link:hover .bi {
+    transform: translateX(0.125rem);
+}
+
+/* Pricing card specific styles */
+.pricing-card-title {
+    color: var(--bs-body-color);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.pricing-card-title small {
+    font-size: 0.875rem;
+}
+
+/* Feature icon grid styles */
+.feature-icon-small {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* Text background utilities for icons */
+.text-bg-primary .bi {
+    color: white;
+}
+
+.text-bg-success .bi {
+    color: white;
+}
+
+.text-bg-warning .bi {
+    color: white;
+}
+
+.text-bg-info .bi {
+    color: white;
+}
+
 .service-card:hover .service-icon,
 .card:hover .feature-icon {
     transform: scale(1.1);
+}
+
+/* Enhanced hover effects for SVG icons */
+.text-bg-primary:hover,
+.text-bg-success:hover,
+.text-bg-warning:hover,
+.text-bg-info:hover {
+    transform: scale(1.05);
+}
+
+/* Pricing table check icons */
+table .bi {
+    color: var(--bs-success);
 }
 
 /* Button Styles */
